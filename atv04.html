@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipo de eventos</title>
+    <script src="js/AT.js"></script>
+</head>
+<style>
+    input:focus {
+            border: 2px solid blue;
+        }
+</style>
+<body>
+    <button onmouseover="mouse()">Passe o mouse</button>
+    <input type="text" onfocus="focusFunction(this)" onblur="blurFunction(this)" placeholder="clique para focar" onchange="changeFunction(this)">
+    <P>insira algo e confirme</P>
+    <div id="valor"></div>
+</body>
+</html>

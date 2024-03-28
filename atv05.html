@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipo de funções</title>
+</head>
+<body>
+
+    <div id="Resultados"></div>
+
+</body>
+<script>
+    function nomeada() {
+        return "Valor da função nomeada";
+    }
+
+    function soma(a, b) {
+        return a + b;
+    }
+
+    var construtor = new Function("a", "b", "return a + b");
+
+    var literal = function() {
+        return "Valor da função literal";
+    };
+
+    var arrow = (a, b) => a + b;
+
+    document.getElementById("Resultados").innerHTML = `
+        <p>Resultado da função nomeada: ${nomeada()}</p>
+        <p>Resultado da função soma: ${soma(4, 8)}</p>
+        <p>Resultado da função construtor: ${construtor(3, 13)}</p>
+        <p>Resultado da função literal: ${literal()}</p>
+        <p>Resultado da função arrow: ${arrow(5, 6)}</p>
+    `;
+</script>
+
+</html>
